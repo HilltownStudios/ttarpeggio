@@ -115,3 +115,37 @@ async def put_configuration(configuration_id: str):
 @app.delete("/configurations/{configuration_id}", dependencies=[Depends(get_current_user)])
 async def delete_configuration(configuration_id: str):
     pass
+
+# users
+class User(BaseModel):
+    pass
+
+
+# List and Search users
+@app.get("/users", dependencies=[Depends(get_current_user)])
+async def get_users():
+    pass
+
+
+# Create users
+@app.post("/users", dependencies=[Depends(get_current_user)])
+async def post_users():
+    pass
+
+
+# Read a user
+@app.get("/users/{user_id}", dependencies=[Depends(get_current_user)])
+async def get_user(user_id: str):
+    pass
+
+
+# Update a user
+@app.put("/users/{user_id}", dependencies=[Depends(get_current_user)])
+async def put_user(user_id: str):
+    pass
+
+
+# Delete a userj
+@app.delete("/users/{user_id}", dependencies=[Depends(get_current_user)])
+async def delete_user(user_id: str):
+    pass
