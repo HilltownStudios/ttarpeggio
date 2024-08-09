@@ -24,6 +24,6 @@ def test_update_record():
     assert response.status_code == 200
 
 
-def test_delete_records():
+def test_delete_record():
     response = client.delete("/records/1")
     assert response.status_code == 200

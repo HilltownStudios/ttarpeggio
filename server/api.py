@@ -185,3 +185,38 @@ async def put_role(role_id: str):
 @app.delete("/roles/{role_id}", dependencies=[Depends(get_current_user)])
 async def delete_role(role_id: str):
     pass
+
+
+# permissions
+class Permission(BaseModel):
+    pass
+
+
+# List and Search permissions
+@app.get("/permissions", dependencies=[Depends(get_current_user)])
+async def get_permissions():
+    pass
+
+
+# Create permissions
+@app.post("/permissions", dependencies=[Depends(get_current_user)])
+async def post_permissions():
+    pass
+
+
+# Read a user
+@app.get("/permissions/{permission_id}", dependencies=[Depends(get_current_user)])
+async def get_permission(permission_id: str):
+    pass
+
+
+# Update a user
+@app.put("/permissions/{permission_id}", dependencies=[Depends(get_current_user)])
+async def put_permission(permission_id: str):
+    pass
+
+
+# Delete a userj
+@app.delete("/permissions/{permission_id}", dependencies=[Depends(get_current_user)])
+async def delete_permission(permission_id: str):
+    pass

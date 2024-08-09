@@ -14,16 +14,16 @@ def test_post_configurations():
     assert response.status_code == 200
 
 
-def test_get_record():
+def test_get_configuration():
     response = client.get("/configurations/1")
     assert response.status_code == 200
 
 
-def test_update_record():
+def test_update_configuration():
     response = client.put("/configurations/1")
     assert response.status_code == 200
 
 
-def test_delete_configurations():
+def test_delete_configuration():
     response = client.delete("/configurations/1")
     assert response.status_code == 200
