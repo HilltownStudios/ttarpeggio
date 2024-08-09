@@ -13,7 +13,7 @@ def get_current_user():
 
 
 # Files
-class File(BaseModel):
+class RPGFile(BaseModel):
     pass
 
 
@@ -116,6 +116,7 @@ async def put_configuration(configuration_id: str):
 async def delete_configuration(configuration_id: str):
     pass
 
+
 # users
 class User(BaseModel):
     pass
@@ -148,4 +149,39 @@ async def put_user(user_id: str):
 # Delete a userj
 @app.delete("/users/{user_id}", dependencies=[Depends(get_current_user)])
 async def delete_user(user_id: str):
+    pass
+
+
+# roles
+class Role(BaseModel):
+    pass
+
+
+# List and Search roles
+@app.get("/roles", dependencies=[Depends(get_current_user)])
+async def get_roles():
+    pass
+
+
+# Create roles
+@app.post("/roles", dependencies=[Depends(get_current_user)])
+async def post_roles():
+    pass
+
+
+# Read a user
+@app.get("/roles/{role_id}", dependencies=[Depends(get_current_user)])
+async def get_role(role_id: str):
+    pass
+
+
+# Update a user
+@app.put("/roles/{role_id}", dependencies=[Depends(get_current_user)])
+async def put_role(role_id: str):
+    pass
+
+
+# Delete a userj
+@app.delete("/roles/{role_id}", dependencies=[Depends(get_current_user)])
+async def delete_role(role_id: str):
     pass
