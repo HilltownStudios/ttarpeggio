@@ -5,23 +5,23 @@ from server.api import app
 
 client = TestClient(app)
 
-def test_list_records():
-    response = client.get("/records")
+def test_list_configurations():
+    response = client.get("/configurations")
     assert response.status_code == 200
 
-def test_post_records():
-    response = client.post("/records")
+def test_post_configurations():
+    response = client.post("/configurations")
     assert response.status_code == 200
 
 def test_get_record():
-    response = client.get("/records/1")
+    response = client.get("/configurations/1")
     assert response.status_code == 200
 
 def test_update_record():
-    response = client.put("/records/1")
+    response = client.put("/configurations/1")
     assert response.status_code == 200
 
-def test_delete_records():
-    response = client.delete("/records/1")
+def test_delete_configurations():
+    response = client.delete("/configurations/1")
     assert response.status_code == 200
     

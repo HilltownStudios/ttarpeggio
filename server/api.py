@@ -40,6 +40,7 @@ async def delete_file(file_id: str):
     pass
 
 ### Records
+
 class Record(BaseModel):
     pass
 
@@ -66,4 +67,34 @@ async def put_record(record_id: str):
 # Delete Record
 @app.delete("/records/{record_id}", dependencies=[Depends(get_current_user)])
 async def delete_record(record_id: str):
+    pass
+
+## Configurations
+
+class Configuration(BaseModel):
+    pass
+
+# List and Search Configurations
+@app.get("/configurations", dependencies=[Depends(get_current_user)])
+async def get_configurations():
+    pass
+
+# Create Configurations
+@app.post("/configurations", dependencies=[Depends(get_current_user)])
+async def post_configurations():
+    pass
+
+# Read a configuration
+@app.get("/configurations/{configuration_id}", dependencies=[Depends(get_current_user)])
+async def get_configuration(configuration_id: str):
+    pass
+
+# Update a configuration
+@app.put("/configurations/{configuration_id}", dependencies=[Depends(get_current_user)])
+async def put_configuration(configuration_id: str):
+    pass
+
+# Delete a configurationj
+@app.delete("/configurations/{configuration_id}", dependencies=[Depends(get_current_user)])
+async def delete_configuration(configuration_id: str):
     pass
