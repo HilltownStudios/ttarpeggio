@@ -19,11 +19,11 @@ def test_get_user():
     assert response.status_code == 200
 
 
-def test_update_record():
+def test_update_user():
     response = client.put("/users/1")
     assert response.status_code == 200
 
 
-def test_delete_users():
+def test_delete_user():
     response = client.delete("/users/1")
     assert response.status_code == 200

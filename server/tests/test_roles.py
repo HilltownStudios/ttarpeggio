@@ -14,16 +14,16 @@ def test_post_roles():
     assert response.status_code == 200
 
 
-def test_get_record():
+def test_get_role():
     response = client.get("/roles/1")
     assert response.status_code == 200
 
 
-def test_update_record():
+def test_update_role():
     response = client.put("/roles/1")
     assert response.status_code == 200
 
 
-def test_delete_roles():
+def test_delete_role():
     response = client.delete("/roles/1")
     assert response.status_code == 200
