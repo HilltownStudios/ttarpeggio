@@ -1,0 +1,12 @@
+<h1>Namespaces</h1>
+
+<div id="namespaces">
+  <%= link_to "Login", new_session_path unless authenticated? %>
+  <%= link_to "New Namespace", new_namespace_path if authenticated? %>
+  <% @namespaces.each do |namespace| %>
+    <div>
+      <div><%= link_to namespace.label, namespace %></div>
+      <div><%= namespace.uri %></div>
+    </div>
+  <% end %>
+</div>

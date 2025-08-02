@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+skos:
+  label: skos
+  uri: http://www.w3.org/2004/02/skos/core#
+
+dcterms:
+  label: dcterms
+  uri: http://purl.org/dc/terms/

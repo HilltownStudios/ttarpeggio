@@ -1,0 +1,10 @@
+<% cache @namespace do %>
+  <h1><%= @namespace.label %></h1>
+  <div><%= @namespace.uri %></div>
+<% end %>
+
+<%= link_to "Back", namespaces_path %>
+<% if authenticated? %>
+  <%= link_to "Edit", edit_namespace_path(@namespace) %>
+  <%= button_to "Delete", @namespace, method: :delete, data: {turbo_confirm: "Are you sure?"} %>
+<% end %>

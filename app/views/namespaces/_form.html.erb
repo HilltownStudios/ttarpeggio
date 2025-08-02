@@ -1,0 +1,14 @@
+<%= form_with model: @namespace do |form| %>
+  <div>
+    <%= form.label :label %>
+    <%= form.text_field :label %>
+  </div>
+  <div>
+    <%= form.label :uri %>
+    <%= form.text_field :uri %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
